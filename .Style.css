@@ -8,11 +8,6 @@ body a:link {
   text-decoration: none;
 }
 
-.card__img {
-  width: 200px;
-  height: auto;
-}
-
 .header {
   display: flex;
   justify-content: center;
@@ -20,8 +15,8 @@ body a:link {
 }
 .header .title {
   font-family: "Shrikhand", cursive;
-  color: black;
   margin: 0;
+  color: black;
 }
 
 .main {
@@ -67,7 +62,7 @@ body a:link {
 .explorer__btn {
   border: 0;
   border-radius: 30px;
-  background: linear-gradient(173deg, #ff79da 0%, #d66cdb 39%, #ab5edc 85%, #9b59dc 100%);
+  background: linear-gradient(173deg, #FF79DA 0%, #d66cdb 39%, #ab5edc 85%, #9b59dc 100%);
   font-size: 15px;
   padding: 15px 2px 15px 2px;
   width: 200px;
@@ -84,7 +79,7 @@ body a:link {
 }
 
 .operation__bloc {
-  margin-top: 60px;
+  margin: 30px 0px 60px 0px;
 }
 
 .operation__step {
@@ -113,6 +108,7 @@ body a:link {
 }
 .operation__step:hover {
   transform: scale(1.02);
+  background: #f2eafb;
 }
 
 .restaurant {
@@ -127,9 +123,91 @@ body a:link {
   box-shadow: 0 0 16px #0000002e;
 }
 
+.restaurant {
+  display: flex;
+  flex-direction: column;
+}
+.restaurant__card {
+  margin-bottom: 25px;
+  cursor: pointer;
+  position: relative;
+}
+.restaurant__card:hover {
+  transform: scale(1.02);
+}
+
 .card__img {
+  width: 350px;
+  height: 160px;
   object-fit: cover;
   border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.new {
+  background: #99E2D0;
+  color: green;
+  width: 65px;
+  text-align: center;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  position: absolute;
+  top: -2px;
+  right: 16px;
+}
+
+.card__bloc {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  padding-left: 20px;
+}
+.card__bloc__icon {
+  position: absolute;
+  right: 30px;
+  top: 185px;
+  font-size: 1.8rem;
+}
+
+.card__title {
+  margin: 0px;
+  padding-top: 12px;
+}
+.card__txt {
+  margin: 0px;
+  padding: 5px 0px 20px 0px;
+}
+
+.footer {
+  background-color: #363636;
+  padding: 20px 20px 20px 30px;
+}
+.footer a:link {
+  color: white;
+}
+.footer .title {
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  color: white;
+}
+.footer__menu {
+  color: white;
+  padding-top: 40px;
+}
+.footer__menu__bloc {
+  display: flex;
+  flex-direction: row;
+}
+.footer__menu__txt {
+  margin: 0px;
+  padding: 10px 0px 10px 0px;
+}
+.footer__icon {
+  padding: 10px;
+}
+.footer .fas {
+  width: 30px;
 }
 
 /*# sourceMappingURL=.Style.css.map */
