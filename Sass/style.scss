@@ -1,0 +1,139 @@
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+
+
+body {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    a:link{
+        text-decoration: none;
+    }
+}
+
+.card__img{
+    width: 200px;
+    height: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    .title {
+        font-family: 'Shrikhand', cursive;
+        color: black;
+        margin: 0;
+    }
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.location{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px 0px 0px;
+    padding: 15px;;
+    background: #e8e8eb;
+    box-shadow: inset 0 5px 6px -4px lightgrey;
+    width: 100%;
+    justify-content: center;
+    .span__loca{
+        padding: 0px 15px 0px 0px;
+    }
+    &__txt{
+        font-size: 1.1rem;
+        margin: 0;
+    }
+}
+
+.explorer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 40px; 
+    text-align: center;
+    background-color: rgb(247, 247, 247);
+    &__title{
+        font-size: 1.6rem;
+        margin-top: 40px;
+    }
+    &__txt{
+        margin-top: 0px;
+    }
+    &__btn{
+        border: 0;
+        border-radius: 30px;
+        background: linear-gradient(173deg, #ff79da 0%, #d66cdb 39%, #ab5edc 85%, #9b59dc 100%);
+        font-size: 15px;
+        padding: 15px 2px 15px 2px;
+        width: 200px;
+        height: auto;
+        margin: 20px 0px 40px 0px;
+        box-shadow: 0px 6px 5px lightgrey;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.02);
+        }
+    }
+    a:link{
+        color: white;
+    }
+    
+}
+
+.operation__bloc{
+    margin-top: 60px;
+}
+
+.operation__step{
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    box-shadow: 0px 6px 5px lightgrey;
+    background-color: rgb(247, 247, 247);
+    padding: 25px 60px 25px 0px;
+    cursor: pointer;
+    &__number{
+        border-radius: 100%;
+        background-color: $primary;
+        color: white;
+        padding: 2px 7px 2px 7px;
+    }
+    &__icon{
+        margin: 2px 20px 0px 20px;
+        color: gray;
+    }
+    &__txt{
+        padding-top: 2px;
+    }
+    &:hover{
+        transform: scale(1.02);
+    }
+}
+
+.restaurant{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 10px;
+    background-color: rgb(247, 247, 247);
+    &__card{
+        border-radius: 1.5rem;
+        box-shadow: 0 0 16px #0000002e;
+    }
+}
+
+.card__img{
+    object-fit: cover;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
