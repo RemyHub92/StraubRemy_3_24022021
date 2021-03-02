@@ -70,6 +70,7 @@ body a:link {
   margin: 20px 0px 40px 0px;
   box-shadow: 0px 6px 5px lightgrey;
   cursor: pointer;
+  text-align: center;
 }
 .explorer__btn:hover {
   transform: scale(1.02);
@@ -113,6 +114,7 @@ body a:link {
 
 .restaurant {
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   padding-left: 10px;
@@ -121,19 +123,20 @@ body a:link {
 .restaurant__card {
   border-radius: 1.5rem;
   box-shadow: 0 0 16px #0000002e;
-}
-
-.restaurant {
-  display: flex;
-  flex-direction: column;
-}
-.restaurant__card {
   margin-bottom: 25px;
   cursor: pointer;
   position: relative;
 }
 .restaurant__card:hover {
   transform: scale(1.02);
+}
+.restaurant__bloc {
+  margin-top: 40px;
+}
+.restaurant__title {
+  position: relative;
+  left: -106px;
+  top: 38px;
 }
 
 .card__img {
@@ -182,6 +185,7 @@ body a:link {
 .footer {
   background-color: #363636;
   padding: 20px 20px 20px 30px;
+  width: 100%;
 }
 .footer a:link {
   color: white;
@@ -193,7 +197,8 @@ body a:link {
 }
 .footer__menu {
   color: white;
-  padding-top: 40px;
+  padding-top: 20px;
+  line-height: 10px;
 }
 .footer__menu__bloc {
   display: flex;
@@ -203,11 +208,116 @@ body a:link {
   margin: 0px;
   padding: 10px 0px 10px 0px;
 }
+.footer__menu a:hover {
+  text-decoration: underline;
+  color: white;
+}
 .footer__icon {
-  padding: 10px;
+  padding: 10px 10px 10px 0px;
 }
 .footer .fas {
-  width: 30px;
+  width: 20px;
+}
+
+/*Fin de l'index. les autres pasges*/
+.arrow {
+  position: absolute;
+  left: 10px;
+  top: 22px;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.img {
+  height: 300px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.main__bloc {
+  border-radius: 30px 30px 0px 0px;
+  position: sticky;
+  margin-top: -50px;
+  background-color: #f7f7f7;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__bloc__title {
+  display: flex;
+  flex-direction: row;
+}
+.main__bloc__bloc {
+  width: 100%;
+}
+.main__bloc .main__title {
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  margin: 30px;
+}
+.main__bloc .far {
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.starters,
+.dish,
+.dessert {
+  padding: 0px 15px 0px 15px;
+}
+
+.food__title {
+  font-size: 1.1rem;
+  font-weight: lighter;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  padding-bottom: 2px;
+}
+.food__bloc__1 {
+  display: flex;
+  flex-direction: row;
+}
+.food__bloc__card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.05rem;
+  box-shadow: 0px 6px 5px lightgrey;
+  background-color: white;
+  margin-top: 20px;
+  line-height: 0px;
+  padding: 6px 10px 6px 10px;
+}
+.food__bloc__card__bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: -5px;
+}
+.food__bloc__card__price {
+  font-weight: bold;
+}
+
+.btn {
+  border: 0;
+  border-radius: 30px;
+  background: linear-gradient(173deg, #FF79DA 0%, #d66cdb 39%, #ab5edc 85%, #9b59dc 100%);
+  font-size: 15px;
+  padding: 15px 2px 15px 2px;
+  width: 200px;
+  height: auto;
+  margin: 20px 0px 40px 0px;
+  box-shadow: 0px 6px 5px lightgrey;
+  cursor: pointer;
+  text-align: center;
+  margin: 50px 0px 80px 0px;
+}
+.btn:hover {
+  transform: scale(1.02);
+}
+.btn a:link {
+  color: white;
 }
 
 /*# sourceMappingURL=.Style.css.map */

@@ -73,16 +73,7 @@ body {
     }
 
     &__btn {
-        border: 0;
-        border-radius: 30px;
-        background: linear-gradient(173deg, $secondary 0%, #d66cdb 39%, #ab5edc 85%, #9b59dc 100%);
-        font-size: 15px;
-        padding: 15px 2px 15px 2px;
-        width: 200px;
-        height: auto;
-        margin: 20px 0px 40px 0px;
-        box-shadow: $shadow;
-        cursor: pointer;
+        @include btn;
 
         &:hover {
             transform: scale(1.02);
@@ -134,6 +125,7 @@ body {
 
 .restaurant {
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     padding-left: 10px;
@@ -142,14 +134,6 @@ body {
     &__card {
         border-radius: 1.5rem;
         box-shadow: 0 0 16px #0000002e;
-    }
-}
-
-.restaurant {
-    display: flex;
-    flex-direction: column;
-
-    &__card {
         margin-bottom: 25px;
         cursor: pointer;
         position: relative;
@@ -157,6 +141,16 @@ body {
         &:hover {
             transform: scale(1.02);
         }
+    }
+
+    &__bloc {
+        margin-top: 40px;
+    }
+
+    &__title {
+        position: relative;
+        left: -106px;
+        top: 38px;
     }
 }
 
@@ -193,7 +187,7 @@ body {
         top: 185px;
         font-size: 1.8rem;
 
-       
+
     }
 }
 
@@ -212,6 +206,7 @@ body {
 .footer {
     background-color: #363636;
     padding: 20px 20px 20px 30px;
+    width: 100%;
 
     a:link {
         color: white;
@@ -224,7 +219,8 @@ body {
 
     &__menu {
         color: white;
-        padding-top: 40px;
+        padding-top: 20px;
+        line-height: 10px;
 
         &__bloc {
             display: flex;
@@ -235,14 +231,125 @@ body {
             margin: 0px;
             padding: 10px 0px 10px 0px;
         }
+
+        a:hover {
+            text-decoration: underline;
+            color: white;
+        }
     }
 
     &__icon {
-        padding: 10px;
+        padding: 10px 10px 10px 0px;
 
     }
 
     .fas {
-        width: 30px;
+        width: 20px;
     }
+}
+
+/*Fin de l'index. les autres pasges*/
+
+.arrow {
+    position: absolute;
+    left: 10px;
+    top: 22px;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.img {
+    height: 300px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+.main__bloc {
+    border-radius: 30px 30px 0px 0px;
+    position: sticky;
+    margin-top: -50px;
+    background-color: rgb(247, 247, 247);
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__bloc {
+        width: 100%;
+
+    }
+
+    .main__title {
+        @include title;
+        margin: 30px;
+    }
+
+    .far {
+        margin-top: 30px;
+        padding: 10px;
+        font-size: 25px;
+    }
+}
+
+.starters,
+.dish,
+.dessert {
+    padding: 0px 15px 0px 15px;
+}
+
+.food {
+    &__title {
+        font-size: 1.1rem;
+        font-weight: lighter;
+        border-bottom: 3px solid $tertiary;
+        width: 40px;
+        padding-bottom: 2px;
+    }
+
+    &__bloc__1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__bloc__card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 1.05rem;
+        box-shadow: $shadow;
+        background-color: white;
+        margin-top: 20px;
+        line-height: 0px;
+        padding: 6px 10px 6px 10px;
+
+        &__bottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: -5px;
+        }
+
+        &__price {
+            font-weight: bold;
+        }
+
+    }
+}
+
+.btn {
+    @include btn;
+    margin: 50px 0px 80px 0px;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    a:link {
+        color: white;
+    }
+
 }
