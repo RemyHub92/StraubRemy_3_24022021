@@ -191,10 +191,19 @@ body {
         right: 30px;
         top: 185px;
         font-size: 1.8rem;
+        transition: background-color 4s;
 
-
+        &:hover {
+            position: absolute;
+            background-color: red;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+        }
     }
 }
+
+
 
 .card {
     &__title {
@@ -303,7 +312,6 @@ body {
 
 .menu {
     padding: 0px 15px 20px 15px;
-    overflow: hidden;
 }
 
 .food {
@@ -322,19 +330,17 @@ body {
 
     &__bloc__card {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         border-radius: 1.05rem;
         box-shadow: $shadow;
         background-color: white;
         margin-top: 20px;
-        line-height: 0px;
+        line-height: 8px;
         padding: 6px 10px 6px 10px;
+        justify-content: space-between;
 
         &__bottom {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-top: -5px;
+            padding: 28px 13px 1px 10px;
         }
 
         &__price {
@@ -411,5 +417,13 @@ body {
 
     .menu {
         width: 30%;
+    }
+
+    .food__bloc__card {
+        &__top {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
     }
 }
