@@ -191,14 +191,21 @@ body {
         right: 30px;
         top: 185px;
         font-size: 1.8rem;
-        transition: background-color 4s;
+        animation-duration: 10s;
 
         &:hover {
-            position: absolute;
-            background-color: red;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: transparent;
             
+            &::after {
+                font-family: "Font Awesome 5 Free";
+                content: "\f004";
+                background: linear-gradient(173deg, $secondary 0%, #d66cdb 39%, #ab5edc 85%, #9b59dc 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                font-weight: 800;
+                
+            }
+
         }
     }
 }
