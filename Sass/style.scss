@@ -191,11 +191,11 @@ body {
         right: 30px;
         top: 185px;
         font-size: 1.8rem;
-        animation-duration: 10s;
+
 
         &:hover {
             color: transparent;
-            
+
             &::after {
                 font-family: "Font Awesome 5 Free";
                 content: "\f004";
@@ -203,7 +203,8 @@ body {
                 -webkit-background-clip: text;
                 background-clip: text;
                 font-weight: 800;
-                
+                -webkit-animation: appear 400ms ease-in-out alternate;
+                animation: appear 400ms ease-in-out alternate;
             }
 
         }

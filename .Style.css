@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   width: 100%;
   font-family: "Roboto", sans-serif;
@@ -174,13 +175,19 @@ body a:link {
   right: 30px;
   top: 185px;
   font-size: 1.8rem;
-  transition: background-color 4s;
 }
 .card__bloc__icon:hover {
-  position: absolute;
-  background-color: red;
+  color: transparent;
+}
+.card__bloc__icon:hover::after {
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  background: linear-gradient(173deg, #FF79DA 0%, #d66cdb 39%, #ab5edc 85%, #9b59dc 100%);
+  -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  -webkit-animation: appear 400ms ease-in-out alternate;
+  animation: appear 400ms ease-in-out alternate;
 }
 
 .card__title {
