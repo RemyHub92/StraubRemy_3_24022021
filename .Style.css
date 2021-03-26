@@ -9,6 +9,120 @@ body a:link {
   text-decoration: none;
 }
 
+.loader__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 99998;
+  width: 100%;
+  height: 100vh;
+  margin-top: -15px;
+  animation: loader 6s forwards;
+  opacity: 0;
+  background-color: #DCe8e8eb;
+}
+
+.loader {
+  position: fixed;
+  z-index: 99999;
+  width: 220px;
+  height: 220px;
+  background-color: #9356DC;
+  border-radius: 100%;
+}
+.loader__spin:after {
+  position: absolute;
+  top: -9px;
+  bottom: -9px;
+  left: -9px;
+  right: -9px;
+  content: "";
+  border: 10px solid transparent;
+  border-top-color: #FF79DA;
+  border-radius: 50%;
+  -webkit-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+.loader__spin2:after {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  content: "";
+  border: 10px solid transparent;
+  border-top-color: #FF79DA;
+  border-radius: 50%;
+  -webkit-animation: spin2 4s linear infinite;
+  animation: spin2 4s linear infinite;
+}
+.loader__txt {
+  position: relative;
+  top: 92px;
+  left: 20px;
+  color: white;
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  font-size: 24px;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 .header {
   display: flex;
   justify-content: center;
@@ -146,6 +260,7 @@ body a:link {
 .card__img {
   width: 350px;
   height: 160px;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 1.5rem 1.5rem 0 0;
 }
@@ -186,10 +301,38 @@ body a:link {
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: 800;
-  -webkit-animation: appear 400ms ease-in-out alternate;
-  animation: appear 400ms ease-in-out alternate;
+  -webkit-animation: appear 1000ms ease-in-out alternate;
+  animation: appear 1000ms ease-in-out alternate;
 }
 
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .card__title {
   margin: 0px;
   padding-top: 12px;
@@ -247,12 +390,14 @@ body a:link {
 .img {
   height: 300px;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   margin-top: 10px;
 }
 
 .main__bloc {
   border-radius: 30px 30px 0px 0px;
+  position: -webkit-sticky;
   position: sticky;
   margin-top: -50px;
   background-color: #f7f7f7;
@@ -260,6 +405,9 @@ body a:link {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /*------------------------*\
+              CHECK
+  \*------------------------*/
 }
 .main__bloc__title {
   display: flex;
@@ -273,10 +421,19 @@ body a:link {
   margin: 0;
   margin: 30px;
 }
-.main__bloc .far {
-  margin-top: 30px;
-  padding: 10px 35px 10px 10px;
-  font-size: 25px;
+.main__bloc .icon__anim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  width: 50px;
+  margin: -1rem -5rem -1rem 1rem;
+}
+
+.fa-check-circle {
+  color: white;
+  font-size: 20px;
+  font-family: "Font Awesome 5 Free";
 }
 
 .menu {
