@@ -508,6 +508,9 @@ body {
         &:hover>.icon__anim {
             content: "\f058";
             animation: translate 400ms;
+            animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+            -webkit-animation: translate 400ms;
+            -webkit-animation-timing-function: cubic-bezier(.5,1.58,.34,.82);;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -516,9 +519,10 @@ body {
             border-radius: 0 1.05rem 1.05rem 0;
         }
 
-        &:hover>.icon__anim__circle{
+        &:hover>.icon__anim__circle {
             content: "\f058";
             animation: rotate 400ms linear infinite;
+            -webkit-animation: rotate 400ms linear infinite;
         }
     
     }
@@ -539,6 +543,7 @@ body {
             font-weight: bold;
         }
     }
+
 }
 
 .fa-check-circle {
@@ -559,7 +564,29 @@ body {
     }
 }
 
-@keyframes rotate{
+@-webkit-keyframes translate {
+    0% {
+        transform: translateX(60px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg)
+    }
+
+    100%{
+        transform: rotate(180deg)
+    }
+}
+
+@-webkit-keyframes rotate {
     0%{
         transform: rotate(0deg)
     }
