@@ -471,6 +471,13 @@ body {
     &__title {
         display: flex;
         flex-direction: row;
+        align-items: center;
+
+    }
+
+    .far.fa-heart {
+        font-size: 1.8rem;
+        padding-left: 20px;
     }
 
     &__bloc {
@@ -480,7 +487,7 @@ body {
 
     .main__title {
         @include title;
-        margin: 30px;
+        margin: 30px 0px 30px 30px;
     }
 }
 
@@ -504,27 +511,30 @@ body {
         box-shadow: $shadow;
         background-color: white;
         margin-top: 20px;
+        overflow: hidden;
 
         &:hover>.icon__anim {
             content: "\f058";
-            animation: translate 400ms;
-            animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
-            -webkit-animation: translate 400ms;
-            -webkit-animation-timing-function: cubic-bezier(.5,1.58,.34,.82);;
+            animation: translate 300ms;
+            animation-timing-function: linear;
+            -webkit-animation: translate 300ms;
+            -webkit-animation-timing-function: linear;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: $tertiary;
             width: 20%;
             border-radius: 0 1.05rem 1.05rem 0;
+
+            &>.icon__anim__circle {
+                content: "\f058";
+                animation: rotate 400ms linear;
+                -webkit-animation: rotate 500ms linear;
+            }
         }
 
-        &:hover>.icon__anim__circle {
-            content: "\f058";
-            animation: rotate 400ms linear infinite;
-            -webkit-animation: rotate 400ms linear infinite;
-        }
-    
+
+
     }
 
     &__bloc__card {
@@ -535,8 +545,27 @@ body {
         justify-content: space-between;
         width: 100%;
 
+        &__top {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
         &__bottom {
             padding: 28px 13px 1px 10px;
+        }
+
+        &__title {
+            margin: 10px 0 10px 0;
+            line-height: 18px;
+        }
+
+        &__txt {
+            line-height: 16px;
+            margin: 0 0 5px 0;
         }
 
         &__price {
@@ -577,22 +606,22 @@ body {
 }
 
 @keyframes rotate {
-    0%{
-        transform: rotate(0deg)
+    0% {
+        transform: rotate(180deg)
     }
 
-    100%{
-        transform: rotate(180deg)
+    100% {
+        transform: rotate(0deg)
     }
 }
 
 @-webkit-keyframes rotate {
-    0%{
-        transform: rotate(0deg)
+    0% {
+        transform: rotate(180deg)
     }
 
-    100%{
-        transform: rotate(180deg)
+    100% {
+        transform: rotate(0deg)
     }
 }
 
