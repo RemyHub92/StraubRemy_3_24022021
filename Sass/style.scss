@@ -488,6 +488,9 @@ body {
     .main__title {
         @include title;
         margin: 30px 0px 30px 30px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 }
 
@@ -512,6 +515,11 @@ body {
         background-color: white;
         margin-top: 20px;
         overflow: hidden;
+        position: relative;
+        top: 45px;
+        animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
+        animation-delay: 0.15s;
+        opacity: 0;
 
         &:hover>.icon__anim {
             content: "\f058";
@@ -533,8 +541,111 @@ body {
             }
         }
 
+    }
 
+    &__bloc__2{
+        display: flex;
+        flex-direction: row;
+        border-radius: 1.05rem;
+        box-shadow: $shadow;
+        background-color: white;
+        margin-top: 20px;
+        overflow: hidden;
+        position: relative;
+        top: 45px;
+        animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
+        animation-delay: 0.3s;
+        opacity: 0;
 
+        &:hover>.icon__anim {
+            content: "\f058";
+            animation: translate 300ms;
+            animation-timing-function: linear;
+            -webkit-animation: translate 300ms;
+            -webkit-animation-timing-function: linear;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $tertiary;
+            width: 20%;
+            border-radius: 0 1.05rem 1.05rem 0;
+
+            &>.icon__anim__circle {
+                content: "\f058";
+                animation: rotate 400ms linear;
+                -webkit-animation: rotate 500ms linear;
+            }
+        }
+    }
+
+    &__bloc__3{
+        display: flex;
+        flex-direction: row;
+        border-radius: 1.05rem;
+        box-shadow: $shadow;
+        background-color: white;
+        margin-top: 20px;
+        overflow: hidden;
+        position: relative;
+        top: 45px;
+        animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
+        animation-delay: 0.5s;
+        opacity: 0;
+
+        &:hover>.icon__anim {
+            content: "\f058";
+            animation: translate 300ms;
+            animation-timing-function: linear;
+            -webkit-animation: translate 300ms;
+            -webkit-animation-timing-function: linear;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $tertiary;
+            width: 20%;
+            border-radius: 0 1.05rem 1.05rem 0;
+
+            &>.icon__anim__circle {
+                content: "\f058";
+                animation: rotate 400ms linear;
+                -webkit-animation: rotate 500ms linear;
+            }
+        }
+    }
+
+    &__bloc__4{
+        display: flex;
+        flex-direction: row;
+        border-radius: 1.05rem;
+        box-shadow: $shadow;
+        background-color: white;
+        margin-top: 20px;
+        overflow: hidden;
+        position: relative;
+        top: 45px;
+        animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
+        animation-delay: 0.7s;
+        opacity: 0;
+
+        &:hover>.icon__anim {
+            content: "\f058";
+            animation: translate 300ms;
+            animation-timing-function: linear;
+            -webkit-animation: translate 300ms;
+            -webkit-animation-timing-function: linear;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $tertiary;
+            width: 20%;
+            border-radius: 0 1.05rem 1.05rem 0;
+
+            &>.icon__anim__circle {
+                content: "\f058";
+                animation: rotate 400ms linear;
+                -webkit-animation: rotate 500ms linear;
+            }
+        }
     }
 
     &__bloc__card {
@@ -624,6 +735,17 @@ body {
         transform: rotate(0deg)
     }
 }
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(-45px);
+    }
+}
+
 
 .btn {
     @include btn;
