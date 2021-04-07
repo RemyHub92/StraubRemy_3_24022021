@@ -463,7 +463,7 @@ body {
     position: sticky;
     margin-top: -50px;
     background-color: rgb(247, 247, 247);
-    width: 380px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -660,9 +660,6 @@ body {
             display: flex;
             justify-content: center;
             flex-direction: column;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
         }
 
         &__bottom {
@@ -672,11 +669,17 @@ body {
         &__title {
             margin: 10px 0 10px 0;
             line-height: 18px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
 
         &__txt {
             line-height: 16px;
             margin: 0 0 5px 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
 
         &__price {

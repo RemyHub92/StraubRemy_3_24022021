@@ -401,7 +401,7 @@ body a:link {
   position: sticky;
   margin-top: -50px;
   background-color: #f7f7f7;
-  width: 380px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -578,9 +578,6 @@ body a:link {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 .food__bloc__card__bottom {
   padding: 28px 13px 1px 10px;
@@ -588,10 +585,16 @@ body a:link {
 .food__bloc__card__title {
   margin: 10px 0 10px 0;
   line-height: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .food__bloc__card__txt {
   line-height: 16px;
   margin: 0 0 5px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .food__bloc__card__price {
   font-weight: bold;
