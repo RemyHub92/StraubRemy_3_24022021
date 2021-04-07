@@ -421,7 +421,8 @@ body a:link {
 .main__bloc .main__title {
   font-family: "Shrikhand", cursive;
   margin: 0;
-  margin: 30px 0px 30px 30px;
+  margin: 30px 0px 30px 5px;
+  font-size: 26px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -449,8 +450,8 @@ body a:link {
   position: relative;
   top: 45px;
   animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
-  animation-delay: 0.15s;
   opacity: 0;
+  animation-delay: 0.15s;
 }
 .food__bloc__1:hover > .icon__anim {
   content: "";
@@ -481,8 +482,8 @@ body a:link {
   position: relative;
   top: 45px;
   animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
-  animation-delay: 0.3s;
   opacity: 0;
+  animation-delay: 0.3s;
 }
 .food__bloc__2:hover > .icon__anim {
   content: "";
@@ -513,8 +514,8 @@ body a:link {
   position: relative;
   top: 45px;
   animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
-  animation-delay: 0.5s;
   opacity: 0;
+  animation-delay: 0.5s;
 }
 .food__bloc__3:hover > .icon__anim {
   content: "";
@@ -545,8 +546,8 @@ body a:link {
   position: relative;
   top: 45px;
   animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
-  animation-delay: 0.7s;
   opacity: 0;
+  animation-delay: 0.7s;
 }
 .food__bloc__4:hover > .icon__anim {
   content: "";
