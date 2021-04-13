@@ -168,7 +168,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    width: 100%;
 }
 
 .location {
@@ -513,17 +513,17 @@ body {
         animation-delay: 0.15s;
     }
 
-    &__bloc__2{
+    &__bloc__2 {
         @include animation;
-        animation-delay: 0.3s; 
+        animation-delay: 0.3s;
     }
 
-    &__bloc__3{
+    &__bloc__3 {
         @include animation;
         animation-delay: 0.5s;
     }
 
-    &__bloc__4{
+    &__bloc__4 {
         @include animation;
         animation-delay: 0.7s;
     }
@@ -536,10 +536,17 @@ body {
         justify-content: space-between;
         width: 100%;
 
+        &:hover {
+            width: 83%;
+        }
+
         &__top {
             display: flex;
             justify-content: center;
             flex-direction: column;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
 
         &__bottom {
@@ -620,10 +627,11 @@ body {
 }
 
 @keyframes appear {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateY(-45px);
     }

@@ -138,6 +138,7 @@ body a:link {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .location {
@@ -451,6 +452,7 @@ body a:link {
   top: 45px;
   animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
   opacity: 0;
+  cursor: pointer;
   animation-delay: 0.15s;
 }
 .food__bloc__1:hover > .icon__anim {
@@ -463,7 +465,7 @@ body a:link {
   align-items: center;
   justify-content: center;
   background-color: #99E2D0;
-  width: 20%;
+  width: 81px;
   border-radius: 0 1.05rem 1.05rem 0;
 }
 .food__bloc__1:hover > .icon__anim > .icon__anim__circle {
@@ -483,6 +485,7 @@ body a:link {
   top: 45px;
   animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
   opacity: 0;
+  cursor: pointer;
   animation-delay: 0.3s;
 }
 .food__bloc__2:hover > .icon__anim {
@@ -495,7 +498,7 @@ body a:link {
   align-items: center;
   justify-content: center;
   background-color: #99E2D0;
-  width: 20%;
+  width: 81px;
   border-radius: 0 1.05rem 1.05rem 0;
 }
 .food__bloc__2:hover > .icon__anim > .icon__anim__circle {
@@ -515,6 +518,7 @@ body a:link {
   top: 45px;
   animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
   opacity: 0;
+  cursor: pointer;
   animation-delay: 0.5s;
 }
 .food__bloc__3:hover > .icon__anim {
@@ -527,7 +531,7 @@ body a:link {
   align-items: center;
   justify-content: center;
   background-color: #99E2D0;
-  width: 20%;
+  width: 81px;
   border-radius: 0 1.05rem 1.05rem 0;
 }
 .food__bloc__3:hover > .icon__anim > .icon__anim__circle {
@@ -547,6 +551,7 @@ body a:link {
   top: 45px;
   animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
   opacity: 0;
+  cursor: pointer;
   animation-delay: 0.7s;
 }
 .food__bloc__4:hover > .icon__anim {
@@ -559,7 +564,7 @@ body a:link {
   align-items: center;
   justify-content: center;
   background-color: #99E2D0;
-  width: 20%;
+  width: 81px;
   border-radius: 0 1.05rem 1.05rem 0;
 }
 .food__bloc__4:hover > .icon__anim > .icon__anim__circle {
@@ -575,10 +580,16 @@ body a:link {
   justify-content: space-between;
   width: 100%;
 }
+.food__bloc__card:hover {
+  width: 83%;
+}
 .food__bloc__card__top {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .food__bloc__card__bottom {
   padding: 28px 13px 1px 10px;

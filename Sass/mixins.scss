@@ -30,7 +30,8 @@
     top: 45px;
     animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
     opacity: 0;
-
+    cursor: pointer;
+    
     &:hover>.icon__anim {
         content: "\f058";
         animation: translate 300ms;
@@ -41,7 +42,7 @@
         align-items: center;
         justify-content: center;
         background-color: $tertiary;
-        width: 20%;
+        width: 81px;
         border-radius: 0 1.05rem 1.05rem 0;
 
         &>.icon__anim__circle {
