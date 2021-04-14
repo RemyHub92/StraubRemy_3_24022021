@@ -31,6 +31,8 @@
     animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
     opacity: 0;
     cursor: pointer;
+    padding-left: 10px;
+    justify-content: space-between;
     
     &:hover>.icon__anim {
         content: "\f058";

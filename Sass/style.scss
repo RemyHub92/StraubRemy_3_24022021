@@ -272,9 +272,9 @@ body {
     background-color: rgb(247, 247, 247);
 
     &__title {
-        position: relative;
-        left: -106px;
-        top: 38px;
+        width: 100%;
+        padding: 40px 0px 25px 20px;
+        margin: 0;
     }
 
     &__card {
@@ -290,13 +290,13 @@ body {
     }
 
     &__bloc {
-        margin-top: 40px;
+        padding: 0px 10px;
     }
 }
 
 
 .card__img {
-    width: 350px;
+    width: 100%;
     height: 160px;
     -o-object-fit: cover;
     object-fit: cover;
@@ -532,12 +532,12 @@ body {
         display: flex;
         flex-direction: row;
         line-height: 8px;
-        padding: 6px 10px 6px 10px;
+        padding: 6px 0px 6px 0px;
         justify-content: space-between;
         width: 100%;
 
         &:hover {
-            width: 83%;
+            width: 71%;
         }
 
         &__top {
@@ -558,7 +558,7 @@ body {
             line-height: 18px;
             text-overflow: ellipsis;
             overflow: hidden;
-            white-space: nowrap;
+            white-space: normal;
         }
 
         &__txt {
@@ -574,6 +574,10 @@ body {
         }
     }
 
+}
+
+.icon__anim {
+    width: 0px;
 }
 
 .fa-check-circle {
@@ -660,17 +664,23 @@ body {
 @media #{$medium} {
     .restaurant {
         &__title {
-            position: inherit;
-            margin: 40px 0px -15px 0px;
+            text-align: center;
+            width: 200px;
         }
 
         &__bloc__2 {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             flex-direction: row;
         }
 
         &__card {
             margin: 0px 20px 40px 20px;
+        }
+
+        .card__img {
+            width: 350px;
         }
     }
 
@@ -684,6 +694,8 @@ body {
         &__bloc {
             display: flex;
             flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
         }
     }
 

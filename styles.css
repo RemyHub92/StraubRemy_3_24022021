@@ -240,9 +240,9 @@ body a:link {
   background-color: #f7f7f7;
 }
 .restaurant__title {
-  position: relative;
-  left: -106px;
-  top: 38px;
+  width: 100%;
+  padding: 40px 0px 25px 20px;
+  margin: 0;
 }
 .restaurant__card {
   border-radius: 1.5rem;
@@ -255,11 +255,11 @@ body a:link {
   transform: scale(1.02);
 }
 .restaurant__bloc {
-  margin-top: 40px;
+  padding: 0px 10px;
 }
 
 .card__img {
-  width: 350px;
+  width: 100%;
   height: 160px;
   -o-object-fit: cover;
   object-fit: cover;
@@ -453,6 +453,8 @@ body a:link {
   animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
   opacity: 0;
   cursor: pointer;
+  padding-left: 10px;
+  justify-content: space-between;
   animation-delay: 0.15s;
 }
 .food__bloc__1:hover > .icon__anim {
@@ -486,6 +488,8 @@ body a:link {
   animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
   opacity: 0;
   cursor: pointer;
+  padding-left: 10px;
+  justify-content: space-between;
   animation-delay: 0.3s;
 }
 .food__bloc__2:hover > .icon__anim {
@@ -519,6 +523,8 @@ body a:link {
   animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
   opacity: 0;
   cursor: pointer;
+  padding-left: 10px;
+  justify-content: space-between;
   animation-delay: 0.5s;
 }
 .food__bloc__3:hover > .icon__anim {
@@ -552,6 +558,8 @@ body a:link {
   animation: appear 1s cubic-bezier(0, 0, 0, 1) forwards;
   opacity: 0;
   cursor: pointer;
+  padding-left: 10px;
+  justify-content: space-between;
   animation-delay: 0.7s;
 }
 .food__bloc__4:hover > .icon__anim {
@@ -576,12 +584,12 @@ body a:link {
   display: flex;
   flex-direction: row;
   line-height: 8px;
-  padding: 6px 10px 6px 10px;
+  padding: 6px 0px 6px 0px;
   justify-content: space-between;
   width: 100%;
 }
 .food__bloc__card:hover {
-  width: 83%;
+  width: 71%;
 }
 .food__bloc__card__top {
   display: flex;
@@ -599,7 +607,7 @@ body a:link {
   line-height: 18px;
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: normal;
 }
 .food__bloc__card__txt {
   line-height: 16px;
@@ -610,6 +618,10 @@ body a:link {
 }
 .food__bloc__card__price {
   font-weight: bold;
+}
+
+.icon__anim {
+  width: 0px;
 }
 
 .fa-check-circle {
@@ -689,15 +701,20 @@ body a:link {
 /*---------Responsive---------*/
 @media only screen and (min-width: 576px) {
   .restaurant__title {
-    position: inherit;
-    margin: 40px 0px -15px 0px;
+    text-align: center;
+    width: 200px;
   }
   .restaurant__bloc__2 {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     flex-direction: row;
   }
   .restaurant__card {
     margin: 0px 20px 40px 20px;
+  }
+  .restaurant .card__img {
+    width: 350px;
   }
 
   .main__bloc {
@@ -708,6 +725,8 @@ body a:link {
   .restaurant__bloc {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .operation__bloc {
